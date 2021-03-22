@@ -1,19 +1,20 @@
 var hambergurMenu = document.querySelector('.responsive_menu_icon');
 var responsiveMenu = document.querySelector('.responsive__linkers');
 var bgMenu = document.querySelector('.bg');
-
+var bodyEl = document.querySelector('body')
 
 hambergurMenu.addEventListener('click', function () {
-  bgMenu.classList.toggle('opened')
 });
 
 
 hambergurMenu.addEventListener('click', function () {
   responsiveMenu.classList.toggle('opened')
+  bgMenu.classList.toggle('opened')
+  hambergurMenu.classList.toggle('opened')
+  bodyEl.style.overflow = "hidden"
 });
 
 hambergurMenu.addEventListener('click', function () {
-  hambergurMenu.classList.toggle('opened')
 });
 
 var cardToggler = document.querySelectorAll('.team_card_toggle');
