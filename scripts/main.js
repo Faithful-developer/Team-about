@@ -11,7 +11,7 @@ hambergurMenu.addEventListener('click', function () {
   responsiveMenu.classList.toggle('opened')
   bgMenu.classList.toggle('opened')
   hambergurMenu.classList.toggle('opened')
-  bodyEl.style.overflow = "hidden"
+  bodyEl.classList.toggle('hidden')
 });
 
 hambergurMenu.addEventListener('click', function () {

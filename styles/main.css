@@ -42,6 +42,10 @@ body {
   font-family: 'Livvic1', sans-serif;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -283,6 +287,7 @@ body {
 
 .workers .container .cards .card.active {
   padding-top: 0;
+  background-color: red;
 }
 
 .workers .container .cards .card.active .team_card_toggle {
