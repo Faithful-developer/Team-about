@@ -1,0 +1,376 @@
+@import "./normalize";
+@import "./variables";
+@import "./fonts";
+
+body{
+    background: $midnightGreen;
+    font-family: 'Livvic1', sans-serif;
+    &.hidden{
+        overflow: hidden;
+    }
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.btn{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 30px;
+    display: inline-block;
+    color: $white;
+    border: 2px solid $white;
+    box-sizing: border-box;
+    border-radius: 24px;
+    transition: all ease 0.5s;
+    &:hover{
+        background: $white;
+        color: $midnightGreen;
+    }
+    &:active{
+        background: none;
+        opacity: 0.5;
+        color: $white;
+    }
+}
+
+.top{
+    width: 100%;
+    .container{
+        padding: 77px 15px;
+        .responsive__linkers{
+            display: flex;
+            width: 90%;
+            align-items: flex-end;
+            justify-content: space-between;
+            .right{
+                .btn{
+                    padding: 10px 32px;
+                    &:hover{
+                        color: $midnightGreen;
+                    }
+                    &:active{
+                        background: none;
+                        opacity: 0.5;
+                        color: $white;
+                    }
+                }
+            }
+            
+        }
+        .responsive_menu_icon{
+            display: none;
+        }
+        .top__linker{
+            display: flex;
+            align-items: flex-end;
+            a{
+                font-family: 'Livvic', sans-serif;
+                color: $white;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                padding: 3px 0;
+                margin-left: 40px;
+                &:hover{
+                    color: $lightCoral;
+                }
+            }
+            img{
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+.top_footer{
+    width: 100%;
+    background: url(../images/top_footer_bg.svg) no-repeat, $lightCoral;
+    font-family: 'Livvic bold1', sans-serif;
+    background-position: left bottom;
+    padding: 76px 0;
+    .container{
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-family: 'Livvic', sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+            color: $midnightGreen;
+        }
+        .btn{
+            color: $midnightGreen;
+            border: 2px solid $midnightGreen;
+            border-radius: 24px;
+            &:hover{
+                background: $midnightGreen;
+                color: $white;
+            }
+            &:active{
+                color: $midnightGreen;
+                background: none;
+            }
+        }
+    }
+}
+
+
+.home{
+    background: url(../images/responsive_bcgrond.png) no-repeat;
+    width: 100%;
+    background-size: 100px 200px;
+    background-position: right bottom;
+    height: 300px;
+    .container{
+        display: flex;
+        .left__subtitle{
+            width: 25%;
+            h1{
+                font-family: 'Livvic';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 100px;
+                color: $white;
+            }
+            }
+        .right__subtitle{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 75px;
+            .line{
+                width: 50px;
+                height: 3px;
+                background: $lightCoral;
+                margin-bottom: 50px;
+            }
+            p{
+                font-family: 'Livvic1', sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 28px;
+                color: $white;
+                padding-bottom: 7px;
+            }
+        }
+    }
+}
+
+.workers{
+    width: 100%;
+    background: url(../images/bg_workers.svg) no-repeat, url(../images/bg_workers2.svg) no-repeat, $jungleBlue;
+    background-position: top left, bottom right;
+    .container{
+        padding: 140px 0;
+        h1{
+            font-family: 'Livvic', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+            text-align: center;
+            color: $white;
+        }
+        .cards{
+            padding-top: 64px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .card{
+                margin-bottom: 76px;
+                width: 350px;
+                height: 253px;
+                text-align: center;
+                padding-top: 32px;
+                position: relative;
+                background: $stateGreen;
+                &.active{
+                    padding-top: 0;
+                    background-color: red;
+                    .team_card_toggle{
+                        background: $raptureBlue;
+                        transform: rotate(45deg);
+                        margin-top: 15px;
+                    }
+                    .after{
+                        transition: all ease 0.5s;
+                        width: 100%;
+                        height: 212px;
+                        padding: 31px 48px;
+                        p{
+                            font-weight: 100;
+                            font-size: 15px;
+                            line-height: 25px;
+                        }
+                        .social_networks{
+                            margin-top: 24px;
+                            a{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    .before{
+                        width: 100%;
+                        height: 0;
+                        bottom: 0;
+                        overflow: hidden;
+                    }
+                }
+                .after{
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    .social_networks{
+                        a{
+                            svg{
+                                fill: $white;
+                                transition: all ease 0.5s;
+                                &:hover{
+                                    fill: $lightCoral;
+                                }
+                            }
+                        }
+                    }
+                }
+                .team_card_toggle{
+                    position: absolute;
+                    outline: none;
+                    width: 56px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    bottom: -25px;
+                    height: 56px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $lightCoral;
+                    transition: all ease 0.5s;
+                    border: none;
+                }
+                h3{
+                    font-family: 'Livvic', sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $raptureBlue;
+                }
+                p{
+                    font-family: 'Livvic', sans-serif;
+                    font-style: italic;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.companies{
+    padding: 140px 0;
+    background: url(../images/clients-bg.svg) no-repeat,$stateGreen;
+    background-position: top left;
+    background: $stateGreen;
+    .container{
+        text-align: center;
+        h1{
+            font-family: 'Livvic', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 48px;
+            color: $white;
+            margin-bottom: 70px;
+        }
+        .companies_icon{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    background: $darkGreen;
+    .container{
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            .box{
+                display: flex;
+                flex-direction: column;
+                .linkers{
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    a{
+                        font-family: 'Livvic', sans-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 28px;
+                        color: $white;
+                    }
+                }
+                &:last-child{
+                    margin-left: 80px;
+                    a{
+                        font-family: Livvic;
+                        font-style: normal;
+                        font-weight: 100;
+                        font-size: 15px;
+                        line-height: 25px;
+                        color: $white;
+                        mix-blend-mode: normal;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p{
+                order: 2 ;
+                font-family: 'Livvic', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 25px;
+                opacity: 0.6;
+                color: $white;
+            }
+            .social_media{
+                order: 1 ;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                svg{
+                    fill: $white;
+                    margin-left: 20px;
+                    transition: all ease 0.5s;
+                    &:hover{
+                        fill: $lightCoral;
+                    }
+                }
+            }
+        }
+    }
+}
