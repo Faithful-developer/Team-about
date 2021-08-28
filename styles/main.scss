@@ -193,7 +193,6 @@ body{
                 background: $stateGreen;
                 &.active{
                     padding-top: 0;
-                    background-color: red;
                     .team_card_toggle{
                         background: $raptureBlue;
                         transform: rotate(45deg);
